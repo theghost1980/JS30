@@ -1,27 +1,55 @@
 html {
     padding:0;
     margin: 0;
+    background: url('../media-images/drums.jpg') center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: rgb(143, 171, 223);
 }
 body {
     text-align: center;
 }
 #drumKit {
+    top: 40px;
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 400px;
+    width: 500px;
     height: 100px;
     border: 1px solid black;
     margin: auto;
+    background-color: whitesmoke;
 }
 .kit {
+    display: flex;
+    flex-direction: column;
     border: 1px solid black;
     width: 50px;
     height: 50px;
     margin: auto;
+    background-color: rgb(223, 224, 115);
 }
 .kit > p {
     display: inline-block;
     vertical-align: middle;
+}
+.mini-p {
+    font-size: 0.7em;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    color: white;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+}
+.link {
+    text-decoration: underline;
+    color: white;
 }
