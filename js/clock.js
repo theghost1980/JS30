@@ -3,6 +3,11 @@ const m = document.querySelector(".hand.min");
 const s = document.querySelector(".hand.sec");
 const hand = document.querySelectorAll(".hand");
 const p_time = document.querySelector(".time-d");
+var h_counter = 0;
+
+function check_digits(num){
+    return (num <= 9) ? num = "0" + num : num;
+}
 
 function get_time(){
     let dat = new Date();
@@ -10,8 +15,6 @@ function get_time(){
     let minutes = dat.getMinutes();
     let seconds = dat.getSeconds();
     // alert(hours + ":" + minutes + ":" + seconds);
-    //12 -> 360
-    //1h  -> x
     let hdeg = ((hours / 12) * 360) + ((minutes/60)*30);
     h.style.transform = `rotate(${hdeg}deg)`;
     let mdeg = ((minutes / 60) * 360) + ((seconds/60)*6);
@@ -36,7 +39,7 @@ function get_time(){
     }
     //let us check
     // console.log("Sec degrees: " + sdeg + " Seconds: " + seconds);
-    p_time.textContent = "Digital Time: " + hours + ":" + minutes + ":" + seconds;
+    p_time.textContent = "Digital Time: " + check_digits(hours) + ":" + check_digits(minutes) + ":" + check_digits(seconds);
 }
 //let us get the actual time on load, then we adjust the time of auto-execution
 get_time();

@@ -9,6 +9,9 @@ body {
     display: flex;
     flex-direction: column;
 }
+footer > p {
+    line-height: 0.5em;
+}
 footer p > a {
     text-decoration: underline;
     color: black;
@@ -93,5 +96,8 @@ footer {
     }
     footer {
         position: relative;
+    }
+    footer > p {
+        line-height: 2.5em;
     }
 }
