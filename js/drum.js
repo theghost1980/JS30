@@ -9,6 +9,7 @@ document.onkeypress = check_keyPress;
 var p_array = [];
 var drum_list = document.querySelectorAll('.p_ar');
 drum_list.forEach(function(x){
+    x.addEventListener("click",click_div);
     p_array.push(x);
 });
 
@@ -37,10 +38,18 @@ function check_keyPress(){
     if (evt.keyCode == 103){
         ind = 4;
     }
+    play_it(ind);
+}
+function play_it(x){
     //with array
-    p_array[ind].style.color = "red";
-    audio_ar[ind].play();
-    setTimeout(turn_off,600,ind);
+    p_array[x].style.color = "red";
+    audio_ar[x].play();
+    setTimeout(turn_off,600,x);
+}
+function click_div(){
+    p_array[this.id].style.color = "red";
+    audio_ar[this.id].play();
+    setTimeout(turn_off,600,this.id);
 }
 
 function turn_off(k){
