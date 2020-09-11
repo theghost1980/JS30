@@ -1,0 +1,61 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+}
+#clock-c {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 400px;
+    /* border-radius: 10px; */
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: auto;
+}
+footer > p {
+    line-height: 2.5em;
+    text-align: center;
+}
+footer p > a {
+    text-decoration: underline;
+    color: black;
+}
+@media (max-width: 600px){
+    canvas {
+        width: 300px;
+        height: 300px;
+    }
+    #clock-c {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+    }
+    footer {
+        font-size: 0.8em;
+        width: auto;
+    }
+    footer > p {
+        line-height: 2em;
+    }
+}
+@media (orientation:landscape) and (max-width:600px) {
+    body {
+        flex-direction: row;
+      }
+      footer {
+          position: relative;
+      }
+      footer > p {
+          line-height: 2.5em;
+      }
+}
