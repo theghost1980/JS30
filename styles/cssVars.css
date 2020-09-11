@@ -1,0 +1,68 @@
+/* declaring css variables */
+:root {
+    --blur-img: blur(0);
+    --padding-img: 0;
+    --color-text: black;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    max-width: 98%;
+}
+h2 {
+    text-decoration: underline;
+}
+.text {
+    color: var(--color-text);
+}
+#varsContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: stretch;
+    border: 1px solid black;
+}
+.img {
+    display: block;
+    width: 70%;
+    /* margin: auto; */
+    /* CSS vars */
+    filter: var(--blur-img);
+    padding: var(--padding-img);
+}
+/* setting flex box grow */
+.box1 {
+    flex-grow: 2;
+    border: 1px solid blue;
+}
+.box2 {
+    flex-grow: 1;
+    border: 1px solid red;
+    padding: 2em;
+    text-align: justify;
+}
+
+#textContent {
+    width: 200px;
+}
+#controls {
+    display: flex;
+    flex-direction: column;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+}
+@media (max-width:500px){
+    .text {
+        font-size: 0.8em;
+    }
+}

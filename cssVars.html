@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <script type="text/javascript" src="./js/cssVars.js" defer></script>
+        <link rel="stylesheet" href="./styles/cssVars.css">
+    </head>
+    <body>
+        <header>
+            <title>CSS Variables & JS</title>
+        </header>
+        <h2 class="text">CSS Variables</h2>
+        <div id="varsContainer">
+                <div id="image" class="box1">
+                    <img src="./media-images/image-cssVars.jpeg" alt="Main Image" class="img" id="imag">
+                </div>
+            <div id="textContent" class="box2">
+                <p id="textParagraph" class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                    Vestibulum a ex dignissim, fringilla leo sit amet, pulvinar sem. 
+                    Aliquam et est at velit molestie auctor. 
+                    Vivamus ultricies, massa sed posuere fermentum, nibh mauris auctor est, ut lacinia ligula neque in erat. 
+                    Aliquam semper sapien pulvinar, interdum ante vel, lobortis eros. 
+                    Nulla ultricies eu est at tempor. 
+                    Suspendisse congue venenatis lacus, sed lacinia purus condimentum non. Fusce et nisl felis. 
+                    Curabitur eget maximus enim, blandit sagittis lorem. 
+                    Generated 1 paragraph of<a href="https://www.lipsum.com/"> Lorem Ipsum</a>.
+                </p>
+            </div>
+        </div>
+        <div id="controls">
+                <label for="slid_img" class="text">Img Spacing:<input type="range" min="0" max="100" id="slid_img" value="0" onclick="change_padding();"></label>
+                <label for="blur_img" class="text">Blur Img:<input type="range" min="0" max="100" id="blur_img" value="0" onclick="change_blur();"></label>
+                <label for="color" class="text">Select Color text:<input type="color" id="color" onchange="change_color();" ></label>
+        </div>
+        <footer>
+            <p class="text">@theghost1980 -<a href="https://github.com/wesbos/JavaScript30" target="_blank">of JS30</a>- day 3 - As part of <a href="https://www.theodinproject.com/courses/web-development-101/lessons/fundamentals-part-5" target="_blank">The Odin Project Course</a>.</p>
+            <p class="text"><a href="index.html">Back to Index</a></p>
+        </footer>
+    </body>
+</html>
